@@ -13,6 +13,7 @@ export class InputRxjsComponent implements OnInit {
   public input$: Observable<any>;
   public limit = 20;
   public current = 0;
+  public str: string;
 
   constructor() {}
 
@@ -25,7 +26,7 @@ export class InputRxjsComponent implements OnInit {
         tap((value: string) => (this.current = value.length)),
         filter(_ => this.current < this.limit),
         debounceTime(250),
-        tap((el: string) => console.log(el))
+        tap((el: string) => (this.str = el))
       )
       .subscribe();
   }
