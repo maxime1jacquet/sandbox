@@ -12,7 +12,7 @@ export class RxjsSubjectComponent implements OnInit {
 
   ngOnInit() {
     // this.asyncSubject();
-    this.behaviorSubject();
+    // this.behaviorSubject();
     // this.subject();
   }
 
